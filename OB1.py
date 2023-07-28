@@ -21,7 +21,7 @@ class Pressure_Regulator():
     # see SDK User Guide to determine regulator/sensor types and NI MAX to determine the instrument name
     # calibration array should have 1000 elements
 
-    def __init__(self, Instr_name = 'YOUR_INSTR_NAME', arg_1 = 5, arg_2 = 0, arg_3 = 0, arg_4 = 0, arg_5 = 1, arg_6 = 4, arg_7 = 0, arg_8 = 0, arg_9 = 7, arg_10 = 2.5):
+    def __init__(self, Instr_name = 'YOUR_INSTR_NAME', arg_1 = 0, arg_2 = 0, arg_3 = 0, arg_4 = 0, arg_5 = 0, arg_6 = 0, arg_7 = 0, arg_8 = 0, arg_9 = 0, arg_10 = 0):
         # Initialize OB1 and analog flow sensor, edit arguments based on device specifications found in SDK User Guide.
         self.error = OB1_Initialization(Instr_name.encode('ascii'), arg_1, arg_2, arg_3, arg_4, byref(Instr_ID))
         print('error: %d' % self.error)
