@@ -18,7 +18,7 @@ class Sample_Distributor():
         print('initialization error: %d' % self.error)
 
     def home(self):
-        # Command to home valve (only for MUX Distribution and Recirculation).
+        # Command to home valve (necessary for MUX Distribution and Recirculation).
         # Do not set a new valve position until homing is completed
         self.error = MUX_DRI_Send_Command(Instr_ID.value, 0, Answer, 40)
         time.sleep(5) 
